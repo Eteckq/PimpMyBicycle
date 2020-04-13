@@ -29,7 +29,7 @@
 			<iframe src="/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0" width="410px" height="330px"></iframe>
 		</div>
 		<div class="footerbike p-2">
-			<a href="" class="btn btn-warning">Add to cart</a>
+			<a href="" class="btn btn-warning" data-toggle="modal" data-target="#shopModal">BUY NOW</a>
 			<span class="badge badge-success"><?=$bike->likes ?> likes</span>
 			<span class="badge badge-info"> by <?=$bike->user_id ?></span>
 		</div>
@@ -37,6 +37,19 @@
 
 	<?php } ?>
 
+	<div id="shopModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="shopModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        <p>Call us at this number :</p>
+	        <p>(+33) 6 12 34 56 78</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Got it !</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 </div>
 

@@ -68,8 +68,16 @@ header {
 	align-items: center;
 }
 
-.headerContainer a {
-	margin: 10px 35px;
+.headerRight a {
+	display : inline-block;
+  padding: 2em;
+  color : white;
+  text-decoration: none;
+}
+
+.headerRight a:hover {
+	background-color: white;
+  color: black;
 }
 
 .headerLeft {
@@ -79,6 +87,10 @@ header {
 .headerRight {
 	justify-content: flex-end;
 	width: 40%;
+}
+
+.headerProfile a {
+	padding: 1.5em 2em;
 }
 
 .card-header0,
@@ -112,6 +124,10 @@ li {
 	margin-left: 45px;
 	margin-right: 45px;
 	margin-bottom: 0;
+}
+
+.shopButton {
+	margin: 80px;
 }
 
 #cart {

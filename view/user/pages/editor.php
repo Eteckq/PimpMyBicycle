@@ -112,7 +112,25 @@
 </div>
 
 
+<button type="button" class="btn btn-warning shopButton" data-toggle="modal" data-target="#shopModal">
+  BUY NOW
+</button>
 
+<div id="shopModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="shopModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Call us at this number :</p>
+        <p>(+33) 6 12 34 56 78</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Got it !</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
 
 
 <script src="/include/js/editor.js"></script>

@@ -212,7 +212,7 @@ class Menu {
                 this.selectSlot(this.selectedSlot)
             })
             let shape = $('<div class="shape p-2">').append(svgContent)
-            
+
             $("#shape").append(shape)
         }
     }
@@ -267,7 +267,7 @@ class Menu {
 
 function loadBuild() {
     let id = getParamId()
-    
+
     return new Promise(function(resolve, reject) {
         if (id != null) {
             $.ajax({

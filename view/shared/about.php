@@ -17,8 +17,8 @@
 
       <div class="info">
         <h2>Address</h2>
-        <p>4 rue du cul</p>
-        <p>12345 aergqsev</p> <br>
+        <p>15 rue de Turenne</p>
+        <p>38000 Grenoble</p> <br>
         <h2>Opening hours</h2>
         <p>-Mon-Fri : 9AM - 6PM<br>- Sat : 2PM - 5PM</p><br>
         <h2>Phone number</h2>
