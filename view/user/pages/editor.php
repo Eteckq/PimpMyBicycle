@@ -11,8 +11,8 @@
     }
 
     #editor {
-        display: flex;
-        flex-direction: row;
+        margin: auto;
+        margin-top: 50px;
     }
 
     .selectZone {
@@ -26,14 +26,29 @@
     }
 
     .render {
-        display: block  
+        display: none;
+        position: absolute;
+    }
+
+    a:hover + .render {
+        display:block;
+    }
+
+    #shape {
+        max-height: 350px;
+        overflow-y: scroll;
+    }
+    
+    .shape:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
     }
 </style>
 
 
-<div class="editor">
+<div id="editor" class="container row">
     <!-- Va contenir l'éditeur (sans tous les menus, juste l'affichage) -->
-    <div id="view" style="background-color: beige;">
+    <div class="" id="view" style="background-color: beige;">
 
         <div id="draw"></div>
 
@@ -53,11 +68,14 @@
 
     <!-- Va contenir les menus -->
     <div id="menu" style="background-color: rgb(220, 245, 226);">
-        Menus
-        <button onclick="onShape()">Changer la forme</button>
-        <button onclick="onSave()">Sauvegarder</button>
-        <div id="shape">
+        <button id="saveBtn" class="btn btn-success m-2" onclick="onSave()">Save</button>
+        <button id="createBtn" class="btn btn-danger m-2" onclick="onCreate()">Create new</button>
+        <div>
+            <button id="shapeBtn" class="btn btn-info m-2" style="display:none" onclick="onShape()">Change shape</button>
+            <div id="shape">
+                
 
+            </div>
         </div>
         <div id="pickers">
 
@@ -65,8 +83,9 @@
     </div>
 
     <div id="userBuilds">
+        <h2>Saved bikes:</h2>
     <?php foreach($userBikes as $bike){ ?>
-        <a href="/?page=preview&id=<?= $bike->id ?>">Edit <?= $bike->id ?> </a>
+        <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
         <div class="render">
             <iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0" width="410px" height="330px"></iframe>
         </div>

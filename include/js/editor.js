@@ -166,6 +166,11 @@ class Menu {
     constructor(editor) {
         this.editor = editor
         this.selectedSlot = null
+
+        let $id = getParamId();
+        if ($id == null){
+            this.setNewMode()
+        }
     }
 
     selectSlot(slot) {
@@ -173,6 +178,7 @@ class Menu {
         $("#pickers").html("")
         this.selectedSlot = slot
         this.displayMenuFromSlot(slot)
+        $("#shapeBtn").show()
     }
 
     clickOnShape() {
@@ -205,7 +211,9 @@ class Menu {
                 this.editor.addCustomElement(svg.name, this.selectedSlot, this.getSelectedColors())
                 this.selectSlot(this.selectedSlot)
             })
-            $("#shape").append(svgContent)
+            let shape = $('<div class="shape p-2">').append(svgContent)
+            
+            $("#shape").append(shape)
         }
     }
 
@@ -245,6 +253,10 @@ class Menu {
         if (this.selectedSlot == Slot.Cadre) {
             this.setShapes(getSvgsFromType(Type.Cadre))
         }
+    }
+
+    setNewMode(){
+        $("#saveBtn").hide()
     }
 
 }
@@ -328,23 +340,18 @@ function onSlot(id) {
 }
 
 function onSave() {
-    $id = getParamId();
-    if ($id != null){
-        if(confirm("Voulez vous créer un nouveau vélo ou modifier le vélo actuel ? [Oui] -> Remplace le vélo & [Annuler] -> Créer un nouveau vélo")){
-            edit();
-        } else {
-            save();
-        }
-    } else {
-        save();
-    }
+    edit();
+}
+
+function onCreate(){
+    save();
 }
 
 function save(){
-    $.post( "/?page=preview&action=saveBike", { data: saveBuild() } ).then(()=>alert("OK"));
+    $.post( "/?page=preview&action=saveBike", { data: saveBuild() } ).then(()=>document.location.reload(false));
 }
 function edit(){
-    $.post( "/?page=preview&action=editBike&id=" + getParamId(), { data: saveBuild() } ).then(()=>alert("OK"));
+    $.post( "/?page=preview&action=editBike&id=" + getParamId(), { data: saveBuild() } ).then(()=>document.location.reload(false));
 }
 
 function onShape() {
