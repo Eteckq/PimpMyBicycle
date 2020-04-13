@@ -1,5 +1,12 @@
-<?php $title = 'Top bikes'; $menu = 'about'; ?>
+<?php $title = 'About us'; $menu = 'about'; ?>
 <?php ob_start(); ?>
+
+<style>
+	.aboutContainer {
+		display: flex;
+		justify-content: space-around;
+	}
+</style>
 
 <div class="row text-center fill">
 	<h1>About</h1>
@@ -8,7 +15,7 @@
 <div class="aboutContainer">
       <div class="location">
         <h2>Location</h2>
-        <img src="" alt="Maps">
+        <img src="../include/images/map.png" alt="Maps">
       </div>
 
       <div class="info">
