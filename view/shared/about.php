@@ -5,12 +5,9 @@
 	.aboutContainer {
 		display: flex;
 		justify-content: space-around;
+		padding: 1em 10%;
 	}
 </style>
-
-<div class="row text-center fill">
-	<h1>About</h1>
-</div>
 
 <div class="aboutContainer">
       <div class="location">
