@@ -25,7 +25,7 @@
 
 	<div class="container bikeRender">
 		<div class="render">
-			<iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
+			<iframe src="/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
 				width="410px" height="330px"></iframe>
 		</div>
 		<div class="footer p-2">

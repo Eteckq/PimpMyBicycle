@@ -1,4 +1,4 @@
-<?php $title = 'Top bikes'; $menu = 'bikes'; ?>
+<?php $title = 'Top bikes'; $menu = 'about'; ?>
 <?php ob_start(); ?>
 
 <div class="row text-center fill">

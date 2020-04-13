@@ -6,7 +6,7 @@ if(!isset($menu)){
 
 <div class="collapse navbar-collapse" id="navbar">
   <ul class="navbar-nav mr-auto">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/?page=home">
       <img src="/include/images/logo.png" width="150" height="80" alt="">
     </a>
     <li class="nav-item <?= $menu == 'preview' ? "active" : "" ?>">
