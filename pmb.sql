@@ -13,13 +13,19 @@ CREATE TABLE `bikes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `data` json DEFAULT NULL,
+  `likes` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `bikes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `bikes` (`id`, `user_id`, `data`) VALUES
-(2,	1,	'[{\"id\": \"roue3\", \"slot\": 0, \"colors\": [\"#53ff00\", \"#ee0006\"]}, {\"id\": \"roue2\", \"slot\": 1, \"colors\": [\"#400040\", \"#00ff00\"]}, {\"id\": \"guidon1\", \"slot\": 2, \"colors\": [\"#ff0080\"]}, {\"id\": \"selle0\", \"slot\": 3, \"colors\": [\"#ff8040\"]}, {\"id\": \"cadre1\", \"slot\": 4, \"colors\": [\"#5f5f5f\"]}]');
+INSERT INTO `bikes` (`id`, `user_id`, `data`, `likes`) VALUES
+(2,	1,	'[{\"id\": \"roue0\", \"slot\": 0, \"colors\": [\"#53ff00\", \"#ee0006\"]}, {\"id\": \"roue1\", \"slot\": 1, \"colors\": [\"#400040\", \"#00ff00\"]}, {\"id\": \"guidon1\", \"slot\": 2, \"colors\": [\"#ff0080\"]}, {\"id\": \"selle0\", \"slot\": 3, \"colors\": [\"#ff8040\"]}, {\"id\": \"cadre1\", \"slot\": 4, \"colors\": [\"#5f5f5f\"]}]',	5),
+(3,	1,	'[{\"id\": \"roue3\", \"slot\": 0, \"colors\": [\"#53ff00\", \"#ee0006\"]}, {\"id\": \"roue2\", \"slot\": 1, \"colors\": [\"#400040\", \"#00ff00\"]}, {\"id\": \"guidon1\", \"slot\": 2, \"colors\": [\"#64ee11\"]}, {\"id\": \"selle0\", \"slot\": 3, \"colors\": [\"#48f74d\"]}, {\"id\": \"cadre1\", \"slot\": 4, \"colors\": [\"#800003\"]}]',	3),
+(4,	1,	'[{\"id\": \"roue3\", \"slot\": 0, \"colors\": [\"#53ff00\", \"#ee0006\"]}, {\"id\": \"roue2\", \"slot\": 1, \"colors\": [\"#400040\", \"#00ff00\"]}, {\"id\": \"guidon1\", \"slot\": 2, \"colors\": [\"#64ee11\"]}, {\"id\": \"selle0\", \"slot\": 3, \"colors\": [\"#48f74d\"]}, {\"id\": \"cadre0\", \"slot\": 4, \"colors\": [\"#800003\"]}]',	7),
+(5,	1,	'[{\"id\": \"roue1\", \"slot\": 0, \"colors\": [\"#000000\", \"#000000\"]}, {\"id\": \"roue0\", \"slot\": 1, \"colors\": [\"#000000\", \"#000000\"]}, {\"id\": \"guidon1\", \"slot\": 2, \"colors\": [\"#000000\"]}, {\"id\": \"selle0\", \"slot\": 3, \"colors\": [\"#000000\"]}, {\"id\": \"cadre2\", \"slot\": 4, \"colors\": [\"#000000\"]}]',	3),
+(6,	2,	'[{\"id\": \"roue1\", \"slot\": 0, \"colors\": [\"#ff8040\", \"#8080ff\"]}, {\"id\": \"roue1\", \"slot\": 1, \"colors\": [\"#8080ff\", \"#ff8000\"]}, {\"id\": \"guidon2\", \"slot\": 2, \"colors\": [\"#8080ff\", \"#8080ff\"]}, {\"id\": \"selle2\", \"slot\": 3, \"colors\": [\"#8080ff\"]}, {\"id\": \"cadre3\", \"slot\": 4, \"colors\": [\"#ff8040\"]}]',	11),
+(7,	3,	'[{\"id\": \"roue1\", \"slot\": 0, \"colors\": [\"#000000\", \"#000000\"]}, {\"id\": \"roue0\", \"slot\": 1, \"colors\": [\"#000000\", \"#000000\"]}, {\"id\": \"guidon1\", \"slot\": 2, \"colors\": [\"#000000\"]}, {\"id\": \"selle0\", \"slot\": 3, \"colors\": [\"#000000\"]}, {\"id\": \"cadre2\", \"slot\": 4, \"colors\": [\"#000000\"]}]',	0);
 
 DROP TABLE IF EXISTS `elements`;
 CREATE TABLE `elements` (
@@ -44,17 +50,6 @@ INSERT INTO `elements` (`name`, `type`, `svg`) VALUES
 ('roue2',	1,	'<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"110px\" height=\"110px\" viewBox=\"-53 -3 106 106\">\r\n  <path d =\"M0,0 A 50 50, 0, 0 0, 0 100\" fill=\"none\" stroke=\"%COLOR0%\" stroke-width=\"6\"/>\r\n  <path d =\"M0,0 A 50 50, 0, 1 1, 0 100\" fill=\"none\" stroke=\"%COLOR0%\" stroke-width=\"6\"/>\r\n  <path d =\"M0,40 A 10 10, 0, 0 0, 0 60\" fill=\"none\" stroke=\"%COLOR0%\" stroke-width=\"6\"/>\r\n  <path d =\"M0,40 A 10 10, 0, 1 1, 0 60\" fill=\"none\" stroke=\"%COLOR0%\" stroke-width=\"6\"/>\r\n\r\n  <g id=\"rayons\" fill=\"none\" transform=\"translate(0 50)\">\r\n    <path d =\"M0,10 L 0,50\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(45)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(90)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(135)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(180)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(225)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(270)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,10 L 0,50\" transform=\"rotate(315)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n  </g>\r\n</svg>\r\n'),
 ('roue3',	1,	'<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"110px\" height=\"110px\" viewBox=\"-53 -3 106 106\">\r\n  <path d =\"M0,0 A 50 50, 0, 0 0, 0 100\" fill=\"none\" stroke=\"%COLOR0%\" stroke-width=\"6\"/>\r\n  <path d =\"M0,0 A 50 50, 0, 1 1, 0 100\" fill=\"none\" stroke=\"%COLOR0%\" stroke-width=\"6\"/>\r\n\r\n  <g id=\"rayons\" fill=\"none\" transform=\"translate(0 50)\">\r\n    <path d =\"M0,0 L 0,50\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(45)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(90)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(135)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(180)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(225)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(270)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n    <path d =\"M0,0 L 0,50\" transform=\"rotate(315)\" fill=\"none\" stroke=\"%COLOR1%\" stroke-width=\"6\"/>\r\n  </g>\r\n</svg>\r\n');
 
-DROP TABLE IF EXISTS `likes`;
-CREATE TABLE `likes` (
-  `user_id` int(11) NOT NULL,
-  `bike_id` int(11) NOT NULL,
-  KEY `user_id` (`user_id`),
-  KEY `bike_id` (`bike_id`),
-  CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`bike_id`) REFERENCES `bikes` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -64,6 +59,8 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `users` (`id`, `pseudo`, `password`) VALUES
-(1,	'yohan',	'$2y$10$XC8G/4ZpBbLlcFweZ4PsQefQUo4fk2rsGYzal2Zi89iQHYgZDy4G2');
+(1,	'yohan',	'$2y$10$XC8G/4ZpBbLlcFweZ4PsQefQUo4fk2rsGYzal2Zi89iQHYgZDy4G2'),
+(2,	'Dylanfoot',	'$2y$10$/QE/d5zEuQEVThkaY7.B7uEq9qf7R64Ib0QhWX86gPgO/hwg8.b7e'),
+(3,	'lol',	'$2y$10$iaIMUfazLhJWMgeFpOz2e.LPPNj9yw9K3DUow7b33Tfrjz9J02kxa');
 
--- 2020-04-13 10:36:19
+-- 2020-04-13 20:11:49
