@@ -90,7 +90,7 @@
     <?php foreach($userBikes as $bike){ ?>
     <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
     <div class="render">
-        <iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
+        <iframe src="/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
             width="410px" height="330px"></iframe>
     </div>
 
