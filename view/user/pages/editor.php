@@ -73,7 +73,6 @@
         <div>
             <button id="shapeBtn" class="btn btn-info m-2" style="display:none" onclick="onShape()">Change shape</button>
             <div id="shape">
-                
 
             </div>
         </div>
@@ -82,16 +81,17 @@
         </div>
     </div>
 
-    <div id="userBuilds">
-        <h2>Saved bikes:</h2>
-    <?php foreach($userBikes as $bike){ ?>
-        <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
-        <div class="render">
-            <iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0" width="410px" height="330px"></iframe>
-        </div>
+</div>
 
-        <?php } ?>
+<div class="container" id="userBuilds">
+    <h2>Saved bikes:</h2>
+<?php foreach($userBikes as $bike){ ?>
+    <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
+    <div class="render">
+        <iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0" width="410px" height="330px"></iframe>
     </div>
+
+    <?php } ?>
 </div>
 
 

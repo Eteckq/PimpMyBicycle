@@ -232,7 +232,11 @@ class Menu {
         for (let i = 0; i < count; i++) {
             let input = $('<input type="color" class="colorPicker" pickerid=' + i + ' value=' + customElement.colors[i] + '>')
             input.change(() => this.updateColors())
-            $("#pickers").append(input)
+
+            let div = $("<div>").append("<h1>").html("Color #" + (i+1))
+            div.append(input)
+
+            $("#pickers").append(div)
         }
     }
 
