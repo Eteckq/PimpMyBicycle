@@ -6,6 +6,11 @@
 		border: solid 1px black;
 	}
 
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.bikeRender {
 		margin: 10px 50px;
 		max-width: 420px;
