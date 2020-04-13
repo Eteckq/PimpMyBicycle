@@ -7,7 +7,7 @@ if(!isset($menu)){
 <header>
   <div class="headerContainer">
     <div class="headerLeft">
-    <a href="#">
+    <a href="/">
       <img src="/include/images/logo.png" width="150" height="80" alt="">
     </a>
     </div>

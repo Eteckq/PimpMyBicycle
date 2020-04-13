@@ -51,12 +51,12 @@ class BikeManager extends Manager {
 
 	public function getBestBikes(){
 		$db = $this->dbConnect();
-	    $req = $db->prepare('SELECT * FROM bikes ORDER BY likes DESC LIMIT 10');
+	    $req = $db->prepare('select bikes.id,pseudo, data, likes from bikes join users where bikes.user_id = users.id order by likes DESC limit 10');
 	    $req->execute();
 
 		$bikes = array();
 		while ($bike = $req->fetch()) {
-			$bikes[] = new Bike($bike["id"],$bike["user_id"],$bike["data"],$bike["likes"]);
+			$bikes[] = new Bike($bike["id"],$bike["pseudo"],$bike["data"],$bike["likes"]);
 		}
 		return $bikes;
 	}

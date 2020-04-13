@@ -26,6 +26,7 @@
 		<div class="footerbike p-2">
 			<a href="" class="btn btn-warning">Add to cart</a>
 			<span class="badge badge-success"><?=$bike->likes ?> likes</span>
+			<span class="badge badge-info"> by <?=$bike->user_id ?></span>
 		</div>
 	</div>
 
