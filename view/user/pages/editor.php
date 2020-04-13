@@ -57,7 +57,7 @@
 
 <div id="editor">
     <!-- Va contenir l'éditeur (sans tous les menus, juste l'affichage) -->
-    <div class="" id="view" style="background-color: beige;">
+    <div class="" id="view" style="background-image: url('../include/images/background.jpg'); background-color: beige;">
 
         <div id="draw"></div>
 
