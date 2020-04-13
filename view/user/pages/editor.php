@@ -6,13 +6,22 @@
         position: relative;
         width: 600px;
         max-width: 600px;
-        height: 500px;
-        max-height: 500px
+        height: 400px;
+        max-height: 400px;
     }
 
     #editor {
-        margin: auto;
-        margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    .container {
+      position: relative;
+      margin: 0;
+      width: 30%;
+      max-width: 40%;
     }
 
     .selectZone {
@@ -46,9 +55,9 @@
 </style>
 
 
-<div id="editor" class="container row">
+<div id="editor">
     <!-- Va contenir l'éditeur (sans tous les menus, juste l'affichage) -->
-    <div class="" id="view" style="background-color: beige;">
+    <div class="" id="view" style="background-image: url('../include/images/background3.png'); background-color: beige;">
 
         <div id="draw"></div>
 
@@ -83,19 +92,22 @@
         </div>
     </div>
 
-</div>
+    <!-- Pour sélectionner les anciens projets avec preview -->
+    <div class="container" id="userBuilds">
+        <h2>Saved bikes:</h2>
+        <?php foreach($userBikes as $bike){ ?>
+        <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
+        <div class="render">
+            <iframe src="/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
+                width="410px" height="330px"></iframe>
+        </div>
 
-<div class="container" id="userBuilds">
-    <h2>Saved bikes:</h2>
-    <?php foreach($userBikes as $bike){ ?>
-    <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
-    <div class="render">
-        <iframe src="/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
-            width="410px" height="330px"></iframe>
+        <?php } ?>
     </div>
 
-    <?php } ?>
 </div>
+
+
 
 
 

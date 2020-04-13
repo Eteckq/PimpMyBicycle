@@ -1,14 +1,18 @@
-<?php $title = 'Top bikes'; $menu = 'bikes'; ?>
+<?php $title = 'About us'; $menu = 'about'; ?>
 <?php ob_start(); ?>
 
-<div class="row text-center fill">
-	<h1>About</h1>
-</div>
+<style>
+	.aboutContainer {
+		display: flex;
+		justify-content: space-around;
+		padding: 1em 10%;
+	}
+</style>
 
 <div class="aboutContainer">
       <div class="location">
         <h2>Location</h2>
-        <img src="" alt="Maps">
+        <img src="../include/images/map.png" alt="Maps">
       </div>
 
       <div class="info">

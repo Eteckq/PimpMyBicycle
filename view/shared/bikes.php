@@ -16,10 +16,6 @@
 	}
 </style>
 
-<div class="row text-center fill">
-	<h1>Shop</h1>
-</div>
-
 <div class="container">
 	<?php foreach($bikes as $bike){ ?>
 
@@ -27,7 +23,7 @@
 		<div class="render">
 			<iframe src="/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0" width="410px" height="330px"></iframe>
 		</div>
-		<div class="footer p-2">
+		<div class="footerbike p-2">
 			<a href="" class="btn btn-warning">Add to cart</a>
 			<span class="badge badge-success"><?=$bike->likes ?> likes</span>
 		</div>
