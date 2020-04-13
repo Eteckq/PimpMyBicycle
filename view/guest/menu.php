@@ -12,7 +12,7 @@ if(!isset($menu)){
     </a>
     </div>
     <div class="headerRight">
-      <a class="<?= $menu == 'about' ? "active" : "" ?>" href="/?page=about">About us</a>
+      <a class="<?= $menu == 'about' ? "active" : "" ?>" href="/?page=about">About</a>
       <a class="<?= $menu == 'faq' ? "active" : "" ?>" href="/?page=faq">Q&A</a>
       <div class="headerProfile">
         <a class="btn btn-outline-dark" href="/?page=login" role="button">Login</a>
