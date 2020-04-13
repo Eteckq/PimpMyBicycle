@@ -1,7 +1,6 @@
 <?php $title = 'FAQ'; $menu = 'faq'; ?>
 <?php ob_start(); ?>
 
-
 <div class="faq">
 <h2>Frequently asked questions :</h2>
   <div class="card">
@@ -9,7 +8,7 @@
       How to ride ?
     </div>
     <div class="card-body">
-      <p class="card-text">Put your ass on the bike</p>
+      <p class="card-text">Put your ass on the bike and you're good to go !</p>
     </div>
   </div>
 
@@ -18,16 +17,16 @@
       Is the paint edible ?
     </div>
     <div class="card-body">
-      <p class="card-text">Why don't you try first and tell me ?</p>
+      <p class="card-text">Why don't you try and then tell me ?</p>
     </div>
   </div>
 
   <div class="card">
     <div class="card-header2">
-      Will my bike go faster ?
+      Will my bike go faster thanks to PimpMyBicycle ?
     </div>
     <div class="card-body">
-      <p class="card-text">No</p>
+      <p class="card-text">No.</p>
     </div>
   </div>
 
@@ -36,7 +35,7 @@
       Will I get a ticket if my bicycle is blue ?
     </div>
     <div class="card-body">
-      <p class="card-text">Yes, and the corona</p>
+      <p class="card-text">Yes, and the coronavirus.</p>
     </div>
   </div>
 </div>
