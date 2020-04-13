@@ -17,7 +17,7 @@ if(!isset($menu)){
       <a class="<?= $menu == 'about' ? "active" : "" ?>" href="/?page=about">About us</a>
       <a class="<?= $menu == 'faq' ? "active" : "" ?>" href="/?page=faq">Q&A</a>
       <div class="headerProfile">
-      <a class="btn btn-outline-dark" href="#" onclick="destroy()" role="button">Logout</a>
+        <a class="btn btn-outline-dark" href="#" onclick="destroy()" role="button"><?= $_SESSION['pseudo'] ?> Logout</a>
       </div>
     </div>
   </div>

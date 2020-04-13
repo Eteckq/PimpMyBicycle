@@ -10,7 +10,7 @@ class ConnectionManager extends Manager {
         if($password == "" OR $pseudo == ""){
             return false;
         } else if(password_verify($password, $user['password'])){
-            $_SESSION['admin'] = true;
+            $_SESSION['pseudo'] = $pseudo;
             $_SESSION['user_id'] = $user['id'];
             if($stayConnected){
                 //Extension de la durée de la session
