@@ -34,8 +34,8 @@
 
     .selectZone:hover {
         cursor: pointer;
-        background-color: rgb(0, 0, 0);
-        opacity: 0.05;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.2;
     }
 
     .render {
@@ -66,15 +66,15 @@
         <div id="draw"></div>
 
         <!-- Contient les hitboxs pour les clics sur les parties du vélo -->
-        <div class="selectZone" style="top: 275px; left: 155px; min-width: 80px; min-height: 80px;" onclick="onSlot(0)">
+        <div class="selectZone" style="top: 275px; left: 145px; min-width: 100px; min-height: 100px;" onclick="onSlot(0)">
         </div>
-        <div class="selectZone" style="top: 275px; left: 360px; min-width: 80px; min-height: 80px;" onclick="onSlot(1)">
+        <div class="selectZone" style="top: 275px; left: 360px; min-width: 100px; min-height: 100px;" onclick="onSlot(1)">
         </div>
-        <div class="selectZone" style="top: 148px; left: 408px; min-width: 80px; min-height: 80px;" onclick="onSlot(2)">
+        <div class="selectZone" style="top: 145px; left: 415px; min-width: 80px; min-height: 80px;" onclick="onSlot(2)">
         </div>
         <div class="selectZone" style="top: 140px; left: 230px; min-width: 80px; min-height: 80px;" onclick="onSlot(3)">
         </div>
-        <div class="selectZone" style="top: 230px; left: 250px; min-width: 120px; min-height: 100px;"
+        <div class="selectZone" style="top: 208px; left: 245px; min-width: 120px; min-height: 120px;"
             onclick="onSlot(4)">
         </div>
 
