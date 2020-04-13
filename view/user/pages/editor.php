@@ -28,6 +28,10 @@
         position: absolute;
     }
 
+    #menu{
+        min-width: 300px;
+    }
+
     .selectZone:hover {
         cursor: pointer;
         background-color: rgb(0, 0, 0);
@@ -44,7 +48,7 @@
     }
 
     #shape {
-        max-height: 350px;
+        max-height: 260px;
         overflow-y: scroll;
     }
 
