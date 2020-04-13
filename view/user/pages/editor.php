@@ -30,15 +30,15 @@
         position: absolute;
     }
 
-    a:hover + .render {
-        display:block;
+    a:hover+.render {
+        display: block;
     }
 
     #shape {
         max-height: 350px;
         overflow-y: scroll;
     }
-    
+
     .shape:hover {
         background-color: rgba(0, 0, 0, 0.1);
         cursor: pointer;
@@ -61,7 +61,8 @@
         </div>
         <div class="selectZone" style="top: 140px; left: 230px; min-width: 80px; min-height: 80px;" onclick="onSlot(3)">
         </div>
-        <div class="selectZone" style="top: 230px; left: 250px; min-width: 120px; min-height: 100px;" onclick="onSlot(4)">
+        <div class="selectZone" style="top: 230px; left: 250px; min-width: 120px; min-height: 100px;"
+            onclick="onSlot(4)">
         </div>
 
     </div>
@@ -71,7 +72,8 @@
         <button id="saveBtn" class="btn btn-success m-2" onclick="onSave()">Save</button>
         <button id="createBtn" class="btn btn-danger m-2" onclick="onCreate()">Create new</button>
         <div>
-            <button id="shapeBtn" class="btn btn-info m-2" style="display:none" onclick="onShape()">Change shape</button>
+            <button id="shapeBtn" class="btn btn-info m-2" style="display:none" onclick="onShape()">Change
+                shape</button>
             <div id="shape">
 
             </div>
@@ -85,10 +87,11 @@
 
 <div class="container" id="userBuilds">
     <h2>Saved bikes:</h2>
-<?php foreach($userBikes as $bike){ ?>
+    <?php foreach($userBikes as $bike){ ?>
     <a class="btn btn-warning" href="/?page=preview&id=<?= $bike->id ?>">Bike #<?= $bike->id ?> </a>
     <div class="render">
-        <iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0" width="410px" height="330px"></iframe>
+        <iframe src="http://localhost:31313/?page=preview&id=<?= $bike->id ?>&action=viewBike" frameborder="0"
+            width="410px" height="330px"></iframe>
     </div>
 
     <?php } ?>

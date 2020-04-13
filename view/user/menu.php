@@ -13,7 +13,7 @@ if(!isset($menu)){
       <a class="nav-link" href="/?page=preview">Editor</a>
     </li>
     <li class="nav-item <?= $menu == 'bikes' ? "active" : "" ?>">
-      <a class="nav-link" href="/?page=bikes">Top</a>
+      <a class="nav-link" href="/?page=bikes">Shop</a>
     </li>
     <li class="nav-item <?= $menu == 'about' ? "active" : "" ?>">
       <a class="nav-link" href="/?page=about">About us</a>

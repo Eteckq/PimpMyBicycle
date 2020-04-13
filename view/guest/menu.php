@@ -9,9 +9,6 @@ if(!isset($menu)){
     <a class="navbar-brand" href="#">
       <img src="/include/images/logo.png" width="150" height="80" alt="">
     </a>
-    <li class="nav-item <?= $menu == 'bikes' ? "active" : "" ?>">
-      <a class="nav-link" href="/?page=bikes">Top</a>
-    </li>
     <li class="nav-item <?= $menu == 'about' ? "active" : "" ?>">
       <a class="nav-link" href="/?page=about">About us</a>
     </li>
