@@ -16,7 +16,7 @@ if(!isset($menu)){
       <a class="nav-link" href="/?page=faq">Q&A</a>
     </li>
     <li class="nav-item">
-    <a class="btn btn-outline-light" href="/?page=login" role="button">Login</a>
+    <a class="btn btn-outline-dark" href="/?page=login" role="button">Login</a>
     </li>
   </ul>
 </div>
