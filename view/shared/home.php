@@ -1,32 +1,22 @@
 <?php $title = 'Home'; $menu = 'home'; ?>
 <?php ob_start(); ?>
 
-<div class="row text-center fill">
-	<h1>Pimp My Bike</h1>
-</div>
-
 <div id="carouselHome" class="carousel slide" data-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<img src="../include/images/bike2.png" alt="Bike workshop">
-			<div>
-        <h2>You gotta pimp my bike !</h2>
-        <p>zdfpoi zefopi efioj oeipfopizgfioqdv oidv   zdiofiozdf zzF</p>
-      </div>
+      <h2>You gotta pimp my bike !</h2>
+      <p>Create the bike of your dreams : start now !</p>
 		</div>
 		<div class="carousel-item">
 			<img src="../include/images/bike3.png" alt="Wild bike">
-			<div>
-        <h2>Unlimited personalization !</h2>
-        <p>zerohdfji poaze aizj e jzepj azejp ioj piogjoizf kdfj</p>
-      </div>
+      <h2>Unlimited personalization !</h2>
+      <p>You can select every shape of every part and change its color to fit your style !</p>
 		</div>
 		<div class="carousel-item">
 			<img src="../include/images/bike1.png" alt="Mountain bike">
-			<div>
-        <h2>You gotta pimp my bike !</h2>
-				<p>C'EST LA TROISIEME SLIDE TA MERE</p>
-      </div>
+			<h2>Everything is hand-made !</h2>
+			<p>Because every pimped bike is unique, everything is hand-made in our workshops !</p>
 		</div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">

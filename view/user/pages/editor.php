@@ -6,8 +6,8 @@
         position: relative;
         width: 600px;
         max-width: 600px;
-        height: 500px;
-        max-height: 500px
+        height: 400px;
+        max-height: 400px;
     }
 
     #editor {
@@ -57,7 +57,7 @@
 
 <div id="editor">
     <!-- Va contenir l'éditeur (sans tous les menus, juste l'affichage) -->
-    <div class="" id="view" style="background-image: url('../include/images/background.jpg'); background-color: beige;">
+    <div class="" id="view" style="background-image: url('../include/images/background3.png'); background-color: beige;">
 
         <div id="draw"></div>
 
