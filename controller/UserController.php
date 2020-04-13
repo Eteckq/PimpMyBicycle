@@ -23,7 +23,7 @@ class UserController extends DefaultController {
 	}
 
 	function bikes(){
-		$bikes = $this->bikeManager->getUserBikes();
+		$bikes = $this->bikeManager->getBestBikes();
 		require('view/shared/bikes.php');
 	}
 

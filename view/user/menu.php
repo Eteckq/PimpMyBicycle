@@ -4,28 +4,24 @@ if(!isset($menu)){
 }
 ?>
 
-<div class="collapse navbar-collapse" id="navbar">
-  <ul class="navbar-nav mr-auto">
-    <a class="navbar-brand" href="#">
+<header>
+  <div class="headerContainer">
+    <div class="headerLeft">
+    <a href="#">
       <img src="/include/images/logo.png" width="150" height="80" alt="">
     </a>
-    <li class="nav-item <?= $menu == 'preview' ? "active" : "" ?>">
-      <a class="nav-link" href="/?page=preview">Editor</a>
-    </li>
-    <li class="nav-item <?= $menu == 'bikes' ? "active" : "" ?>">
-      <a class="nav-link" href="/?page=bikes">Shop</a>
-    </li>
-    <li class="nav-item <?= $menu == 'about' ? "active" : "" ?>">
-      <a class="nav-link" href="/?page=about">About us</a>
-    </li>
-    <li class="nav-item <?= $menu == 'faq' ? "active" : "" ?>">
-      <a class="nav-link" href="/?page=faq">Q&A</a>
-    </li>
-    <li class="nav-item">
+    </div>
+    <div class="headerRight">
+      <a class="<?= $menu == 'preview' ? "active" : "" ?>" href="/?page=preview">Editor</a>
+      <a class="<?= $menu == 'bikes' ? "active" : "" ?>" href="/?page=bikes">Shop</a>
+      <a class="<?= $menu == 'about' ? "active" : "" ?>" href="/?page=about">About us</a>
+      <a class="<?= $menu == 'faq' ? "active" : "" ?>" href="/?page=faq">Q&A</a>
+      <div class="headerProfile">
       <a class="btn btn-outline-dark" href="#" onclick="destroy()" role="button">Logout</a>
-    </li>
-  </ul>
-</div>
+      </div>
+    </div>
+  </div>
+</header>
 
 <script>
   function destroy() {

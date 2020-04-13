@@ -49,6 +49,18 @@ class BikeManager extends Manager {
     	return json_encode($bikeReq["data"]);
 	}
 
+	public function getBestBikes(){
+		$db = $this->dbConnect();
+	    $req = $db->prepare('SELECT * FROM bikes ORDER BY likes DESC LIMIT 10');
+	    $req->execute();
+
+		$bikes = array();
+		while ($bike = $req->fetch()) {
+			$bikes[] = new Bike($bike["id"],$bike["user_id"],$bike["data"],$bike["likes"]);
+		}
+		return $bikes;
+	}
+
 	public function saveBike($build){
 		$db = $this->dbConnect();
 	    $req = $db->prepare('INSERT INTO `bikes` (`user_id`,`data`) VALUES (:user_id, :data)');

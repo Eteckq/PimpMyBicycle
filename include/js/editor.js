@@ -279,7 +279,7 @@ function loadBuild() {
                     resolve(JSON.parse(response))
                 })
         } else {
-            let json = '[{"id":"roue1","slot":0,"colors":["#00FF00","#0000EE"]},{"id":"roue0","slot":1,"colors":["#000000","#00FF00"]},{"id":"guidon1","slot":2,"colors":["#ff8040"]},{"id":"selle0","slot":3,"colors":["#ff8040"]},{"id":"cadre0","slot":4,"colors":["#ff8040"]}]'
+            let json = '[{"id": "roue1", "slot": 0, "colors": ["#000000", "#000000"]}, {"id": "roue0", "slot": 1, "colors": ["#000000", "#000000"]}, {"id": "guidon1", "slot": 2, "colors": ["#000000"]}, {"id": "selle0", "slot": 3, "colors": ["#000000"]}, {"id": "cadre2", "slot": 4, "colors": ["#000000"]}]'
             resolve(JSON.parse(json))
         }
     })

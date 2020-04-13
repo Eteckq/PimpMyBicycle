@@ -14,7 +14,7 @@
 
 <body>
     <div class="text-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav>
         <?php
         if(isset($_SESSION['user_id'])){
             include('view/user/menu.php');
