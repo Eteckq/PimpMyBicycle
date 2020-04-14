@@ -7,26 +7,31 @@ const Type = {
 
 const Slot = {
     Roue1: {
+        name: "Left Wheel",
         id: 0,
         x: 140,
         y: 270
     },
     Roue2: {
+        name: "Right Wheel",
         id: 1,
         x: 355,
         y: 270
     },
     Guidon: {
+        name: "Handlebar",
         id: 2,
         x: 408,
         y: 148
     },
     Selle: {
+        name: "Seat",
         id: 3,
         x: 230,
         y: 140
     },
     Cadre: {
+        name: "Bike Frame",
         id: 4,
         x: 180,
         y: 200
@@ -179,6 +184,7 @@ class Menu {
         this.selectedSlot = slot
         this.displayMenuFromSlot(slot)
         $("#shapeBtn").show()
+        $("#shapeName").html("Selected shape: " + slot.name)
     }
 
     clickOnShape() {
@@ -279,7 +285,7 @@ function loadBuild() {
                     resolve(JSON.parse(response))
                 })
         } else {
-            let json = '[{"id": "roue1", "slot": 0, "colors": ["#000000", "#000000"]}, {"id": "roue0", "slot": 1, "colors": ["#000000", "#000000"]}, {"id": "guidon1", "slot": 2, "colors": ["#000000"]}, {"id": "selle0", "slot": 3, "colors": ["#000000"]}, {"id": "cadre2", "slot": 4, "colors": ["#000000"]}]'
+            let json = '[{"id": "roue1", "slot": 0, "colors": ["#FFFFFF", "#FFFFFF"]}, {"id": "roue0", "slot": 1, "colors": ["#FFFFFF", "#FFFFFF"]}, {"id": "guidon1", "slot": 2, "colors": ["#FFFFFF"]}, {"id": "selle0", "slot": 3, "colors": ["#FFFFFF"]}, {"id": "cadre2", "slot": 4, "colors": ["#FFFFFF"]}]'
             resolve(JSON.parse(json))
         }
     })
