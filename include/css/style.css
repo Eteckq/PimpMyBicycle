@@ -1,7 +1,4 @@
 /* anim duration */
-* {
-  transition-duration: 150ms;
-}
 
 @font-face {
   font-family: "PMBFont";
@@ -81,6 +78,7 @@ header {
 }
 
 .headerRight a {
+	transition-duration: 150ms;
 	display : inline-block;
   padding: 2em;
   color : white;

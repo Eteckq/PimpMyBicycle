@@ -35,7 +35,7 @@
     .selectZone:hover {
         cursor: pointer;
         background-color: rgb(255, 255, 255);
-        opacity: 0.2;
+        opacity: 0.01;
     }
 
     .render {
@@ -83,7 +83,7 @@
     <!-- Va contenir les menus -->
     <div id="menu" style="background-color: rgb(220, 245, 226);">
         <button id="saveBtn" class="btn btn-success m-2" onclick="onSave()">Save</button>
-        <button id="createBtn" class="btn btn-danger m-2" onclick="onCreate()">Create new</button>
+        <button id="createBtn" class="btn btn-danger m-2" onclick="onCreate()">Save as new</button>
         <div>
             <button id="shapeBtn" class="btn btn-info m-2" style="display:none" onclick="onShape()">Change
                 shape</button>

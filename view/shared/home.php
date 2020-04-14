@@ -29,5 +29,7 @@
 	</a>
 </div>
 
+<a style='margin: 30px; padding: 20px 100px; font-size: 3em;font-family: "PMBFont", Arial, sans-serif;' href="/?page=preview" class="btn btn-info">Start now !</a>
+
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>

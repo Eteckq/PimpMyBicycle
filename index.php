@@ -87,6 +87,10 @@ if($userId){ //Si le user est connecté
         case "about":
             $defaultController->about();
             break;
+        case "preview":
+            $connectionController = new ConnectionController();
+            $connectionController->register();
+            break;
         default:
             $defaultController->home();
             break;

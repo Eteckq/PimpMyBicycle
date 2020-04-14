@@ -3,6 +3,7 @@
 
 <style>
 	.render {
+		background-color: #ffffff4d;
 		border: solid 1px black;
 	}
 
