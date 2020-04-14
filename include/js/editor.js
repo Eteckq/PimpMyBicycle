@@ -248,6 +248,7 @@ class Menu {
 
 
     displayShape() {
+        $("#pickers").html("")
         if (this.selectedSlot == Slot.Roue1) {
             this.setShapes(getSvgsFromType(Type.Roue))
         }

@@ -43,7 +43,7 @@
 	    <div class="modal-content">
 	      <div class="modal-body">
 	        <p>Call us at this number :</p>
-	        <p>(+33) 6 12 34 56 78</p>
+	        <p>(+33) 6 72 39 35 91</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-primary" data-dismiss="modal">Got it !</button>
