@@ -84,6 +84,7 @@
     <div id="menu" style="background-color: rgb(220, 245, 226);">
         <button id="saveBtn" class="btn btn-success m-2" onclick="onSave()">Save</button>
         <button id="createBtn" class="btn btn-danger m-2" onclick="onCreate()">Save as new</button>
+        <button id="createBtn" class="btn btn-info m-2" onclick="onRandom()"><i class="fas fa-random"></i></button>
         <div>
             <p id="shapeName">Selected shape: none</p>
             <button id="shapeBtn" class="btn btn-info m-2" style="display:none" onclick="onShape()">Change

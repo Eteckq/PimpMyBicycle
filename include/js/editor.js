@@ -164,6 +164,44 @@ class Editor {
         return this.customElements
     }
 
+    randomize(){
+        console.log(this.customElements);
+        for (const key in this.customElements) {
+            let customElement = this.customElements[key]
+            this.customElements[key] = new CustomElement(this.getRandomAvailibleElement(customElement.element.type), customElement.slot, this.getRandomColors())
+        }
+        console.log(this.customElements);
+        this.redraw()
+    }
+
+    getRandomAvailibleElement(type){
+        let result = []
+        for(const key in this.availibleElements){
+            let element = this.availibleElements[key]
+            if(element.type == type){
+                result.push(element)
+            }
+        }
+        let i = Math.round(Math.random() * (result.length-1))
+        return result[i]
+    }
+
+    getRandomColors(){
+        let colors = []
+        for (let i = 0; i < 10; i++) {
+            colors.push(random_rgba())
+        }
+        return colors
+    }
+}
+
+function random_rgba() {
+    return "#" + Math.floor(Math.random()*16777215).toString(16);
+    
+}
+
+function onRandom(){
+    editor.randomize()
 }
 
 class Menu {
